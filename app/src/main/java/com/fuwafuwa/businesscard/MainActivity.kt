@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting()
+                    mainContents()
                 }
             }
         }
@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(modifier:Modifier = Modifier) {
+fun mainContents(modifier:Modifier = Modifier) {
     Column(modifier= modifier
         .fillMaxSize()
         .background(Color(26, 26, 58)),
@@ -77,6 +77,6 @@ fun subContents(address:String, icon: Painter, modifier: Modifier = Modifier){
 @Composable
 fun DefaultPreview() {
     BusinessCardTheme {
-        Greeting()
+        mainContents()
     }
 }
